@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DetailedActivity">
+
+    <!-- Main Image -->
+
+    <!-- Item Name -->
+
+    <ImageView
+        android:id="@+id/detailImage"
+        android:layout_width="305dp"
+        android:layout_height="252dp"
+        android:layout_marginTop="56dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/email_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Item Type -->
+
+    <!-- Item Price -->
+
+    <!-- Quantity Layout -->
+
+    <!-- Add to Cart Button -->
+
+    <TextView
+        android:id="@+id/detailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Item Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.699"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/detailType"
+        android:layout_width="283dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="20dp"
+        android:text="Item Type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailName" />
+
+    <TextView
+        android:id="@+id/detailPrice"
+        android:layout_width="152dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:text="Item Price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.72"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailType" />
+
+    <LinearLayout
+        android:id="@+id/quantityLayout"
+        android:layout_width="178dp"
+        android:layout_height="61dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailPrice">
+
+        <!-- Reduce Quantity ImageView -->
+
+        <!-- Quantity TextView -->
+        <ImageView
+            android:id="@+id/cartReduce2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/baseline_indeterminate_check_box_24" />
+
+        <!-- Add More Quantity ImageView -->
+        <TextView
+            android:id="@+id/cartQuantity2"
+            android:layout_width="446dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/cartAddMore2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/baseline_add_box_24" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/addToCart"
+        android:layout_width="220dp"
+        android:layout_height="49dp"
+        android:layout_marginHorizontal="55dp"
+        android:layout_marginTop="4dp"
+        android:text="Add to Cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quantityLayout" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
